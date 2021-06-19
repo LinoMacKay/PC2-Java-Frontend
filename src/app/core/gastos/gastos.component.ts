@@ -24,6 +24,9 @@ export class GastosComponent implements OnInit {
   deleteGasto(gasto) {}
 
   redirectTo(uri: string) {
-    this.router.navigate([uri]);
+    this.router.navigate([uri, 0]);
+  }
+  editGasto(gasto) {
+    this.router.navigate(['create', gasto.outcomeId]);
   }
 }

@@ -13,11 +13,19 @@ export class OutcomeService {
     return this.http.get<OutcomeResponse[]>(this.URI);
   }
 
+  getOutcomeById(id) {
+    return this.http.get<OutcomeResponse>(this.URI + '/' + id);
+  }
+
   deleteOutcome(id) {
     return this.http.delete(this.URI + '/' + id);
   }
 
   createOutcome(body) {
     return this.http.post(this.URI, body);
+  }
+
+  updateOutcome(body) {
+    return this.http.put(this.URI, body);
   }
 }
