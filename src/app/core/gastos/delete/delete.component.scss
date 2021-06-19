@@ -1,0 +1,12 @@
+@import "src/assets/styles.scss";
+
+.dialog {
+  display: flex;
+  flex-direction: column;
+  @include title();
+  @include subtitle();
+  @include button();
+  button {
+    margin-top: 10px;
+  }
+}

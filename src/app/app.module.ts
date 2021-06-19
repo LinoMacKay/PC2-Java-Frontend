@@ -12,6 +12,7 @@ import { GastosComponent } from './core/gastos/gastos.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { CreateComponent } from './core/gastos/create/create.component';
+import { DeleteComponent } from './core/gastos/delete/delete.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { CreateComponent } from './core/gastos/create/create.component';
     AppbarComponent,
     GastosComponent,
     CreateComponent,
+    DeleteComponent,
   ],
   imports: [
     BrowserModule,
