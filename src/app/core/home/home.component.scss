@@ -1,0 +1,18 @@
+@import "src/assets/styles.scss";
+
+.home-container {
+  width: 100vw;
+  height: calc(100vh - 70px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include title();
+  @include subtitle();
+  position: relative;
+  text-align: justify;
+  .text {
+    position: absolute;
+    left: 10%;
+  }
+}

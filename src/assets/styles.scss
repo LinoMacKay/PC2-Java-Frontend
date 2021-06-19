@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+
+@mixin button() {
+  button {
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 4px 8px 4px 8px;
+    font-size: 1.1rem;
+    font-family: "Varela Round", sans-serif;
+    transition: all 250ms ease;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+  }
+  button:hover {
+    background-color: rgb(168, 168, 168);
+    transform: scale(1.2);
+  }
+}
+
+@mixin title() {
+  h1 {
+    font-family: "Varela Round", sans-serif;
+    margin: 0;
+  }
+}
+
+@mixin subtitle() {
+  h2 {
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+  }
+}
