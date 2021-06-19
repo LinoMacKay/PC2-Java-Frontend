@@ -1,0 +1,61 @@
+@import "src/assets/styles.scss";
+
+.gastos-container {
+  width: 100vw;
+  height: calc(100vh - 70px);
+  .top-container {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    .top-container-data {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include button();
+      .data {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        height: 150px;
+        @include title();
+        @include subtitle();
+      }
+      button {
+        margin-left: 100px;
+      }
+    }
+  }
+  .bottom-container {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    mat-card {
+      margin: 10px;
+      width: 350px;
+      height: 140px;
+      @include title();
+      @include subtitle();
+      position: relative;
+      h2 {
+        cursor: pointer;
+        color: blue;
+        font-size: 1rem;
+      }
+      p {
+        margin-top: 50px;
+      }
+      mat-icon {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+    }
+  }
+}

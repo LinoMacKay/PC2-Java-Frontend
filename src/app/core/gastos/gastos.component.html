@@ -1,0 +1,21 @@
+<div class="gastos-container">
+  <div class="top-container">
+    <div class="top-container-data">
+      <div class="data">
+        <h1>S/.{{ gastoTotal }}</h1>
+        <h2>El total de gastos en este periodo</h2>
+      </div>
+      <button>Registrar un nuevo gasto</button>
+    </div>
+  </div>
+  <div class="bottom-container">
+    <mat-card *ngFor="let gasto of gastos">
+      <div class="card-container">
+        <h1>S/.{{ gasto.amount }}</h1>
+        <h2>{{ gasto.detail }}</h2>
+        <p>{{ gasto.createdAt | date }}</p>
+        <mat-icon>close</mat-icon>
+      </div>
+    </mat-card>
+  </div>
+</div>
