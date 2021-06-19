@@ -12,4 +12,12 @@ export class OutcomeService {
   getAllOutcomes() {
     return this.http.get<OutcomeResponse[]>(this.URI);
   }
+
+  deleteOutcome(id) {
+    return this.http.delete(this.URI + '/' + id);
+  }
+
+  createOutcome(body) {
+    return this.http.post(this.URI, body);
+  }
 }

@@ -5,16 +5,16 @@
         <h1>S/.{{ gastoTotal }}</h1>
         <h2>El total de gastos en este periodo</h2>
       </div>
-      <button>Registrar un nuevo gasto</button>
+      <button (click)="redirectTo('create')">Registrar un nuevo gasto</button>
     </div>
   </div>
   <div class="bottom-container">
-    <mat-card *ngFor="let gasto of gastos">
+    <mat-card *ngFor="let gasto of gastos" class="mat-elevation-z10">
       <div class="card-container">
         <h1>S/.{{ gasto.amount }}</h1>
         <h2>{{ gasto.detail }}</h2>
         <p>{{ gasto.createdAt | date }}</p>
-        <mat-icon>close</mat-icon>
+        <mat-icon (click)="deleteGasto(gasto)">close</mat-icon>
       </div>
     </mat-card>
   </div>

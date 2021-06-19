@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="add-container">
+    <h1>Registrar un nuevo gasto</h1>
+    <h2>Desde aquí podrá registrar un nuevo gasto</h2>
+
+    <form [formGroup]="createForm">
+      <div class="form-container">
+        <label>Monto</label>
+        <input formControlName="monto" type="number" />
+      </div>
+      <div class="form-container">
+        <label>Detalle</label>
+        <input formControlName="detalle" type="text" />
+      </div>
+      <div class="buttons">
+        <button id="guardar" (click)="createOutcome()">Guardar</button>
+        <button (click)="redirectTo('gastos')">volver</button>
+      </div>
+    </form>
+  </div>
+</div>

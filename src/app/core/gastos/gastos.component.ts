@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { OutcomeService } from 'src/app/services/outcome.service';
 
 @Component({
@@ -7,7 +8,7 @@ import { OutcomeService } from 'src/app/services/outcome.service';
   styleUrls: ['./gastos.component.scss'],
 })
 export class GastosComponent implements OnInit {
-  constructor(private outcomeService: OutcomeService) {}
+  constructor(private outcomeService: OutcomeService, private router: Router) {}
 
   gastos = [];
   gastoTotal = 0;
@@ -19,5 +20,10 @@ export class GastosComponent implements OnInit {
         this.gastoTotal += gasto.amount;
       });
     });
+  }
+  deleteGasto(gasto) {}
+
+  redirectTo(uri: string) {
+    this.router.navigate([uri]);
   }
 }
